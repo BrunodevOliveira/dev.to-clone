@@ -1,11 +1,15 @@
 .header {
   background: #ffffff;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   margin-bottom: 1rem;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 .content {
-  max-width: 1300px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 1rem 1.25rem;
   display: flex;
@@ -52,6 +56,40 @@
 
     .searchIcon {
       font-size: 1.5rem;
+    }
+  }
+}
+
+.contentRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  .logIn {
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    color: #171717;
+
+    &:hover {
+      text-decoration: underline;
+      background: #ebecfc;
+      border-radius: 4px;
+    }
+  }
+
+  .createAccount{
+    text-decoration: none;
+    border: 1px solid #3b49df;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    color: #3b49df;
+    font-weight: 500;
+
+    &:hover {
+      background: #3b49df;
+      color: #ffffff;
+      text-decoration: underline;
     }
   }
 }

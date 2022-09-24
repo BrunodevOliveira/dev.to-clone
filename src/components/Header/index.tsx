@@ -17,6 +17,15 @@ export const Header = () => {
             </button>
           </div>
         </div>
+
+        <div className={styles.contentRight}>
+          <a href="#" className={styles.logIn}>
+            Log in
+          </a>
+          <a href="#" className={styles.createAccount}>
+            Create account
+          </a>
+        </div>
       </div>
     </header>
   );
