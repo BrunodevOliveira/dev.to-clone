@@ -1,0 +1,28 @@
+.container {
+  max-width: 1300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+
+  .leftSidebar{
+    flex: 1;
+    max-width: 20%;
+
+    @media (max-width: 1024px) {
+      max-width: 25%;
+    }
+
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
+
+  .postBox {
+    width: 50%;
+
+    @media (max-width: 1024px) {
+      flex: 1;  
+    }
+  }
+}
