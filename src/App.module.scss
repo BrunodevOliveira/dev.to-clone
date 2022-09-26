@@ -8,6 +8,7 @@
   .leftSidebar{
     flex: 1;
     max-width: 20%;
+    margin-top: 4rem;
 
     @media (max-width: 1024px) {
       max-width: 25%;
