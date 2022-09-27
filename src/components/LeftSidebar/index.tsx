@@ -15,7 +15,6 @@ import {
   FcKindle,
   FcLike,
   FcLock,
-  FcOpenedFolder,
   FcShop,
 } from "react-icons/fc";
 import { FaFacebookSquare, FaGithub, FaTwitter } from "react-icons/fa";

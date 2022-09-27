@@ -1,0 +1,92 @@
+.container {
+  flex: 1;
+  margin-top: 5rem;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  .content {
+    background-color: white;
+    color: #404040;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(189, 189, 189, 0.449);
+
+  
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+
+      p{
+        color: #3b49df;
+        font-weight: 600;
+        font-size: 0.75rem;
+        cursor: pointer;
+        padding: 1rem;
+      }
+    }
+  
+    .hashtagPosts {    
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;  
+      gap: 0.375rem;
+      text-decoration: none;
+      color: black;
+      
+      border-bottom: 1px solid gray;
+  
+      font-size: 1rem;
+      font-weight: 400;
+      
+      + & {
+        margin-top: 2rem;
+      }
+  
+      &:hover {
+        color: #6bb4eb;
+  
+        span {
+          color: #404040;
+        }
+      }
+  
+    }
+  
+    .status {
+      padding: 0.25rem;
+      border-radius: 4px;
+      font-size: 0.875rem;
+      margin-bottom: 0.50rem;
+    }
+  
+    .comments {
+      color: #717171;
+      font-size: 0.875rem;
+      margin-top: 0.375rem;
+    }
+
+    .listing {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 1rem;
+      color: #4f567c;
+      font-weight: 700;
+      font-size: 0.90rem;
+
+      &:hover {
+       color: #2f92d7
+      }
+    }
+  }
+}

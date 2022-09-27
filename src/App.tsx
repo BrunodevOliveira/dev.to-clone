@@ -3,6 +3,7 @@ import styles from "./App.module.scss";
 import { Header } from "./components/Header";
 import { LeftSidebar } from "./components/LeftSidebar";
 import { Post } from "./components/Post";
+import { RightSidebar } from "./components/RightSidebar";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <section className={styles.postBox}>
           <Post />
         </section>
+        <RightSidebar />
       </main>
     </>
   );
