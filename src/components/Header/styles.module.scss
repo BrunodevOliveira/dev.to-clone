@@ -23,6 +23,10 @@
   justify-content: center;
   gap: 2rem;
 
+  @media (max-width: 860px) {
+    gap: 1rem;
+  }
+
   img {
     width: 2.75rem;
   }
@@ -40,6 +44,10 @@
       border-right: 0;
       border-radius: 5px 0 0 5px;
       padding: 0.5rem;
+    }
+
+    @media (max-width: 860px) {
+      display: none;
     }
 
     button {
@@ -65,6 +73,10 @@
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+
+  @media (max-width: 860px) {
+    gap: 1rem;
+  }
 
   .logIn {
     text-decoration: none;
