@@ -32,7 +32,7 @@ export const Post = () => {
         <time>Sep 24</time>
 
         <div>
-          <p className={styles.title}>useState Hook In React</p>
+          <p className={styles.title}>how to use the useState hook in react</p>
           <div className={styles.tagBox}>
             <a href="#h">#react</a>
             <a href="#h">#hooks</a>
