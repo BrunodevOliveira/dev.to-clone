@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+<div align="center"><img src="https://avatars.githubusercontent.com/u/98244110?s=200&v=4" /></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔎 Sobre o projeto
+Clone do site dev.to desenvolvido através de um desafio proposto pelo Union Group, grupo formado por desenvolvedores e designers.
+![devto1](https://user-images.githubusercontent.com/85235164/192907105-875043b1-64e2-47c9-81ab-ae4e4ada66ff.png)
 
-## Available Scripts
+## 📄 Competências praticadas no projeto
+- Criar projeto com ``create-reat-app --typescript``
+- Estilização de componentes através de SASS
+- Craiação de REST API com Json-server
+- Manipulação de dados vindos da API
+- Commits semânticos
 
-In the project directory, you can run:
+## 🎲 Clonando a aplicação
 
-### `npm start`
+#### Clone este repositório
+- ```git clone <https://github.com/BrunodevOliveira/dev.to-clone.git>```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Para executar o projeto, será necessário instalar os seguintes programas
+- [NodeJS](https://nodejs.org/en/download/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Na pasta do projeto clonado, basta abrir o terminal e digitar os comandos
+- ```npm install``` para instalar as dependências da aplicação
+- ```npm start``` para iniciar a aplicação
+- ```npm run server``` para criar uma API com os dados a serem consumidos pela aplicação
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tecnologias utilizadas
+<p>
+  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" height="27" />
+  <img alt="Sass" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" height="27">
+  <img alt="Git" src="https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white" height="27">
+  <img alt="Git" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" height="27">
+</p>
