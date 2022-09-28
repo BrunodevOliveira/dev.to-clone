@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "img": "https://avatars.githubusercontent.com/u/85235164?v=4",
+      "name": "Bruno Oliveira",
+      "date": "Sep 24",
+      "title": "how to use the useState hook in react",
+      "tags": ["#react", "#hooks", "#programming"],
+      "reactions": 10,
+      "comments": 3,
+      "reading": 9
+    },
+    {
+      "id": 2,
+      "img": "https://avatars.githubusercontent.com/u/85235164?v=4",
+      "name": "Bruno Gomes Oliveira",
+      "date": "Sep 28",
+      "title": "how to use the useEffect hook in react",
+      "tags": ["#react", "#hooks", "#programming"],
+      "reactions": 18,
+      "comments": 4,
+      "reading": 15
+    }
+  ]
+}

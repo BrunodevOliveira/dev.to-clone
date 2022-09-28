@@ -1,71 +1,98 @@
 import styles from "./styles.module.scss";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { FaRegComment, FaRegBookmark, FaBookmark } from "react-icons/fa";
-import { useState } from "react";
+import { Fragment, useEffect, useState } from "react";
+
+interface PostsInterface {
+  id: number;
+  img: string;
+  name: string;
+  date: string;
+  title: string;
+  tags: string[];
+  reactions: number;
+  comments: number;
+  reading: 15;
+}
 
 export const Post = () => {
   const [isLiked, setIsLiked] = useState(true);
   const [isSaved, setIsSaved] = useState(true);
-  const [countLiked, setCountLiked] = useState(10);
+  const [posts, setPosts] = useState<PostsInterface[]>();
 
   function handleIsLiked() {
     setIsLiked(() => !isLiked);
-
-    if (isLiked) {
-      return setCountLiked(() => countLiked - 1);
-    }
-    setCountLiked(() => countLiked + 1);
   }
 
   function handleIsSaved() {
     setIsSaved(() => !isSaved);
   }
 
-  return (
-    <div className={styles.container}>
-      <img
-        src="https://avatars.githubusercontent.com/u/85235164?v=4"
-        alt="avatar user"
-      />
-      <article>
-        <strong>Bruno Oliveira</strong>
-        <time>Sep 24</time>
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const response = await fetch("http://localhost:3333/posts");
+        const dataPosts = await response.json();
+        setPosts(dataPosts);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchPosts();
+  }, []);
 
-        <div>
-          <p className={styles.title}>how to use the useState hook in react</p>
-          <div className={styles.tagBox}>
-            <a href="#h">#react</a>
-            <a href="#h">#hooks</a>
-            <a href="#h">#programming</a>
+  const renderPostsCards = (post: PostsInterface) => {
+    return (
+      <div key={`post-${post.id}`} className={styles.container}>
+        <img src={post.img} alt="avatar user" className={styles.imgProfile} />
+        <article>
+          <strong>{post.name}</strong>
+          <time>{post.date}</time>
+
+          <div>
+            <p className={styles.title}>{post.title}</p>
+            <div className={styles.tagBox}>
+              {post.tags.map((tag) => (
+                <a href="#h">{tag}</a>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className={styles.reactionsContainer}>
-          <div className={styles.leftSide}>
-            <div className={styles.reaction}>
-              {isLiked ? (
-                <FcLike size={18} onClick={handleIsLiked} />
+          <div className={styles.reactionsContainer}>
+            <div className={styles.leftSide}>
+              <div className={styles.reaction}>
+                {isLiked ? (
+                  <FcLike size={18} onClick={handleIsLiked} />
+                ) : (
+                  <FcLikePlaceholder size={18} onClick={handleIsLiked} />
+                )}
+                <span>{post.reactions} Reactions</span>
+              </div>
+              <div className={styles.comment}>
+                <FaRegComment size={18} />
+                <span> {post.comments} Comments</span>
+              </div>
+            </div>
+
+            <div className={styles.rightSide}>
+              <small>{post.reading} min read</small>
+              {isSaved ? (
+                <FaRegBookmark size={18} onClick={handleIsSaved} />
               ) : (
-                <FcLikePlaceholder size={18} onClick={handleIsLiked} />
+                <FaBookmark size={18} onClick={handleIsSaved} />
               )}
-              <span>{countLiked} Reactions</span>
-            </div>
-            <div className={styles.comment}>
-              <FaRegComment size={18} />
-              <span> 3 Comments</span>
             </div>
           </div>
+        </article>
+      </div>
+    );
+  };
 
-          <div className={styles.rightSide}>
-            <small>10 min read</small>
-            {isSaved ? (
-              <FaRegBookmark size={18} onClick={handleIsSaved} />
-            ) : (
-              <FaBookmark size={18} onClick={handleIsSaved} />
-            )}
-          </div>
-        </div>
-      </article>
-    </div>
+  const renderContent = (
+    <>
+      <div>{posts && posts.map(renderPostsCards)}</div>
+    </>
   );
+
+  return <div>{renderContent}</div>;
 };

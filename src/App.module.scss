@@ -1,9 +1,10 @@
 .container {
-  max-width: 1300px;
+  max-width: 1280px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
-  gap: 1rem;
+  // background: green;
+  margin: 0 auto;
 
   .leftSidebar{
     flex: 1;
@@ -21,7 +22,6 @@
 
   .postBox {
     width: 50%;
-
     @media (max-width: 1024px) {
       flex: 1;  
     }
