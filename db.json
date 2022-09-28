@@ -13,14 +13,36 @@
     },
     {
       "id": 2,
-      "img": "https://avatars.githubusercontent.com/u/85235164?v=4",
-      "name": "Bruno Gomes Oliveira",
+      "img": "https://avatars.githubusercontent.com/u/86635158?v=4",
+      "name": "Jaqueline Rodrigues",
       "date": "Sep 28",
       "title": "how to use the useEffect hook in react",
       "tags": ["#react", "#hooks", "#programming"],
       "reactions": 18,
       "comments": 4,
       "reading": 15
+    },
+    {
+      "id": 3,
+      "img": "https://avatars.githubusercontent.com/u/94381042?v=4",
+      "name": "Silas Sousa",
+      "date": "Jan 15",
+      "title": "how to use the Redux: React state management",
+      "tags": ["#react", "#redux", "#programming"],
+      "reactions": 7,
+      "comments": 8,
+      "reading": 11
+    },
+    {
+      "id": 4,
+      "img": "https://avatars.githubusercontent.com/u/82469705?v=4",
+      "name": "Cleonir Silva",
+      "date": "Jun 07",
+      "title": "Observability for GitHub CI workflows",
+      "tags": ["#github", "#Observability", "#programming"],
+      "reactions": 11,
+      "comments": 4,
+      "reading": 10
     }
   ]
 }

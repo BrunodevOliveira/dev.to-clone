@@ -2,6 +2,7 @@ import styles from "./styles.module.scss";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { FaRegComment, FaRegBookmark, FaBookmark } from "react-icons/fa";
 import { Fragment, useEffect, useState } from "react";
+import { Loading } from "../Loading";
 
 interface PostsInterface {
   id: number;
@@ -12,13 +13,14 @@ interface PostsInterface {
   tags: string[];
   reactions: number;
   comments: number;
-  reading: 15;
+  reading: number;
 }
 
 export const Post = () => {
   const [isLiked, setIsLiked] = useState(true);
   const [isSaved, setIsSaved] = useState(true);
   const [posts, setPosts] = useState<PostsInterface[]>();
+  const [loading, setLoading] = useState(true);
 
   function handleIsLiked() {
     setIsLiked(() => !isLiked);
@@ -36,6 +38,8 @@ export const Post = () => {
         setPosts(dataPosts);
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false);
       }
     }
     fetchPosts();
@@ -87,6 +91,11 @@ export const Post = () => {
       </div>
     );
   };
+  const spinner = (
+    <div className={styles.load}>
+      <Loading />
+    </div>
+  );
 
   const renderContent = (
     <>
@@ -94,5 +103,5 @@ export const Post = () => {
     </>
   );
 
-  return <div>{renderContent}</div>;
+  return <>{loading ? spinner : renderContent}</>;
 };
